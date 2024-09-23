@@ -64,3 +64,7 @@ button {
   border-radius: 4px;
   padding: 0px 10px;
 }
+
+.sectionCards {
+  display: flex;
+}
