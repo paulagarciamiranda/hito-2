@@ -7,7 +7,7 @@ function Footer() {
         style={{
           backgroundColor: " rgb(203, 203, 203)",
           color: "black",
-          height: "60px",
+          height: "10vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

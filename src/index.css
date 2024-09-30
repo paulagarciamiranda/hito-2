@@ -55,6 +55,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-around;
+  height: 10vh;
 }
 
 button {
@@ -69,11 +70,14 @@ button {
   display: flex;
 }
 
-.registro {
-  height: 100vh;
+.ambos-formularios {
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
   color: #242424;
-  width: 30%;
-  margin: 100px auto;
+  width: 80%;
+  margin: 100px auto 0px;
 }
 
 .error {

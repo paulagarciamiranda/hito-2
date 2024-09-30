@@ -1,11 +1,9 @@
 import React from "react";
 import { useState } from "react";
 
-
-function Register() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passconfrirm, setPassconfrirm] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -17,7 +15,7 @@ function Register() {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar un formato de email con cualquier dominio
 
-    if (!email.trim() || !password.trim() || !passconfrirm.trim()) {
+    if (!email.trim() || !password.trim()) {
       setError("Todos los campos son obligatorios");
       return;
     }
@@ -27,28 +25,21 @@ function Register() {
       );
       return;
     }
-
     if (password.length < 6) {
       setError("La contraseña debe tener al menos 6 caracteres");
       return;
     }
 
-    if (password !== passconfrirm) {
-      setError("Las contraseñas no coinciden");
-      return;
-    }
-
-    setSuccess("Tu cuenta se ha creado con éxito");
+    setSuccess("¡Has iniciado sesión correctamente!");
     setError("");
 
     setEmail("");
     setPassword("");
-    setPassconfrirm("");
   };
 
   return (
-    <div className="registro">
-      <h1>Crea tu cuenta</h1>
+    <div className="login">
+      <h1>Login</h1>
       <form className="formulario" onSubmit={validarDatos}>
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
@@ -62,23 +53,12 @@ function Register() {
             value={email}
           />
           <label>Contraseña</label>
-          <p style={{ fontSize: "12px", marginBottom: "4px" }}>
-            Debe contener 6 caracteres como mínimo
-          </p>
           <input
             type="password"
             name="password"
             className="form-control"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-          />
-          <label>Confirmar Contraseña</label>
-          <input
-            type="password"
-            name="passconfrirm"
-            className="form-control"
-            onChange={(e) => setPassconfrirm(e.target.value)}
-            value={passconfrirm}
           />
           <button
             type="submit"
@@ -93,4 +73,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Login;

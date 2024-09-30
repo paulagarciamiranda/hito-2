@@ -10,6 +10,7 @@ const Navbar = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        height: "10vh"
       }}
     >
       <div style={{ display: "flex", gap: "12px" }}>
