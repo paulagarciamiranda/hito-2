@@ -10,10 +10,10 @@ function Login() {
   const validarDatos = (e) => {
     e.preventDefault();
 
-    setError(""); // Limpiar error al iniciar validación
-    setSuccess(""); // Limpiar mensaje de éxito
+    setError(""); // para limpiar error al iniciar validación
+    setSuccess(""); // para limpiar mensaje de éxito
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar un formato de email con cualquier dominio
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // para validar un formato de email
 
     if (!email.trim() || !password.trim()) {
       setError("Todos los campos son obligatorios");
